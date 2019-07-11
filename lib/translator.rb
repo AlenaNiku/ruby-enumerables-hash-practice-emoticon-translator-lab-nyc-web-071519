@@ -1,6 +1,5 @@
 require 'yaml'
 
-
 def load_library(file_path)
   emoticons = {"get_meaning" => {}, "get_emoticon" => {}}
   YAML.load_file(file_path).each do |meaning, describe|
@@ -23,7 +22,7 @@ end
 
 def get_english_meaning(path, emoticon)
   emoticons = load_library(path)
-  result = emoticons["get_meaning"][emoticon] 
+  result = emoticons["get_meaning"][emoticon]
   if result
     result
   else
